@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather HTML, CSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+   
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="src/style2.css" rel="stylesheet" />
+
+    <script
+      src="https://kit.fontawesome.com/fc7b961c6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+       
+        <div class="col-6">
+          <div class="card city-form">
+            <div class="card-body">
+              <form id="search-form">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">City <button id="locationButton">Your location</button></label>
+    <input type="text" class="form-control" id="search-city-input" placeholder="Enter your city" autocomplete="off">
+  </div>
+ </form>
+              <div class="card">
+                <h6 id="yourCityName">
+                    Kai-shi, Yamanashi 
+                    <i class="fa-solid fa-star-half-stroke"></i> </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="col-4 kai-shi">
+            
+            <div class="card">
+                <div class="card-body">
+                    <h6>Current Weather in <span id="location-result">Kai-shi, Yamanashi,</span> <span class="timeRightNow">Saturday, 05:29 a.m.</span></h6>
+                    <hr/>
+                    <p class="weather-now">
+                    <span id="degreesNow">
+                        35 <a href = "#" id="cels">°C</a>/<a href = "#" id="fahr">°F</a></span> <i class="fa-solid fa-sun"></i><br />
+                    <span id="wind"> Wind 5km/h </span> <br />
+                    <span id="hum">Humidity: 40%</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+<br />
+
+      <div class="card" style="width:40rem">
+            <div class="card-body">
+      <ul class="day-weather">
+        <li><i class="fa-solid fa-cloud-rain emoji"></i></li>
+          <li class=today>Today's weather</li>
+        <li><i class="fa-solid fa-cloud-sun emoji"></i></li>
+        <li class="five-days">Five days weather</li>
+        <li><i class="fa-solid fa-cloud-bolt emoji"></i></li>
+          <li class="two-weeks">Two weeks weather</li>
+      </ul>
+      </div>
+      </div>
+     
+
+
+
+<br />
+      <br />
+       <div class="card" style="width: 40rem">
+            <div class="card-body weather-days">
+              
+  <div class="row row-cols-2">
+    
+    <div class="col"><h4 class="saturday">SAT <br /> <br /><i class="fa-solid fa-cloud-sun emoji"></i><br />
+    <br /><p>35&#8451; 24&#8451;</p></div>
+      
+    <div class="col"><h4 class="sunday">SUN <br /> <br /><i class="fa-solid fa-cloud-sun emoji"></i> <br /> <br /> <p>34&#8451 24&#8451</p> </div>
+      <br /> 
+    <div class="col"><h4 class="monday">MON <br /> <br /> <i class="fa-solid fa-sun emoji"></i> <br /> <br /> <p>35&#8451; 24&#8451;</p></div>
+      <br /> 
+    <div class="col"><h4 class="tuesday">TUE </i> <br /> <br /> <i class="fa-solid fa-cloud-rain emoji"></i> <br /> <br /> <p>34&#8451; 24&#8451;</p> </div>
+      <br /> 
+      <div class="col"><h4 class="wednesday">WED <br /> <br/> <i class="fa-solid fa-cloud-rain emoji"></i><br /> <br /> <p>32&#8451; 25&#8451;</p> </div>
+      <br /> 
+  </div>
+</div>
+ </div>
+ <span class="code"><a href="https://github.com/summerlanchan/vanilla-sandbox" class="code-link">Open-source code</a> by Victoria</span>
+  <script src="src/index.js"></script>
+  </body>
+</html>
