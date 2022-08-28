@@ -62,6 +62,8 @@ function retrievePosition(position) {
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let tempElement = document.querySelector("#temperature");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
@@ -69,6 +71,8 @@ function showFahrenheitTemp(event) {
 
 function showCelsTemp(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(celsiusTemp);
 }

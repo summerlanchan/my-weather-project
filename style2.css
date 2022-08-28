@@ -91,11 +91,18 @@ p.weather-now {
   color: hsl(210, 98%, 76%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#degreesNow {
+#temperature {
   font-size: 25px;
 }
 
 #icon {
   margin-right: -10px;
   width: 60px;
+}
+.weather-now .active {
+  color: black;
+  cursor: default;
+}
+.weather-now .active:hover {
+  text-decoration: none;
 }
