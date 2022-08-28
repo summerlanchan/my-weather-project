@@ -31,13 +31,13 @@
     <div class="container">
       <div class="row">
        
-        <div class="col-6">
+        <div class="col-auto mr-auto">
           <div class="card city-form">
             <div class="card-body">
               <form id="search-form">
   <div class="form-group">
-    <label for="exampleFormControlInput1">City <button id="locationButton">Your location</button></label>
-    <input type="text" class="form-control" id="search-city-input" placeholder="Enter your city" autocomplete="off">
+    <label for="exampleFormControlInput1">City</label>
+    <input type="text" class="form-control" id="search-city-input" placeholder="Enter your city" autocomplete="off"><button>Search<i class="fa-solid fa-paw"></i></button>
   </div>
  </form>
               <div class="card">
@@ -48,20 +48,35 @@
             </div>
           </div>
         </div>
-         <div class="col-4 kai-shi">
+         
+        <div class="col-auto kai-shi">
             
-            <div class="card">
+          <div class="card">
                 <div class="card-body">
-                    <h6>Current Weather in <span id="location-result">Kai-shi, Yamanashi,</span> <span class="timeRightNow">Saturday, 05:29 a.m.</span></h6>
+                    <h6>Current Weather in <span id="location-result">Kai-shi, Yamanashi</span> </br><span class="timeRightNow">Saturday, 05:29 a.m.</span></h6>
                     <hr/>
+                    <div class="row">
+                      <div class="col-8 col-sm-6">
                     <p class="weather-now">
-                    <span id="degreesNow">
-                        35 <a href = "#" id="cels">°C</a>/<a href = "#" id="fahr">°F</a></span> <i class="fa-solid fa-sun"></i><br />
-                    <span id="wind"> Wind 5km/h </span> <br />
-                    <span id="hum">Humidity: 40%</span>
+                      <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon"/>
+                   <span id="degreesNow">
+                        35</span> <a href = "#" id="cels">°C</a>|<a href = "#" id="fahr">°F</a> </br>
                     </p>
-                </div>
+                    </div>
+                    <div class="col-4 col-sm-6">
+                    <ul id="weatherDetails">
+                    <li id="weatherDescription">Clear</li>
+                    <li id="wind"> Wind 5km/h </li> <br />
+                    <li id="hum">Humidity:40%</li>
+                    </ul>
             </div>
+            </div>
+            </div>
+          </div>
+            </div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -104,7 +119,7 @@
   </div>
 </div>
  </div>
- <span class="code"><a href="https://github.com/summerlanchan/my-weather-project" class="code-link">Open-source code</a> by Victoria</span>
+ <small class="code"><a href="https://github.com/summerlanchan/my-weather-project" class="code-link">Open-source code</a> by Victoria</small>
   <script src="index.js"></script>
   </body>
 </html>

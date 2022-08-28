@@ -12,7 +12,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-currentTime.innerHTML = `, ${day}, ${hours}: ${minutes}`;
+currentTime.innerHTML = `Last updated: ${day}, ${hours}: ${minutes}`;
 
 function search(event) {
   event.preventDefault();
@@ -32,13 +32,21 @@ form.addEventListener("submit", search);
 function showWeather(response) {
   let weatherNow = Math.round(response.data.main.temp);
   let currentWeather = document.querySelector("#degreesNow");
-  currentWeather.innerHTML = `${weatherNow}°C`;
+  currentWeather.innerHTML = `${weatherNow}`;
+  weatherDescr = response.data.weather[0].main;
+  let weatherStateNow = document.querySelector("#weatherDescription");
+  weatherStateNow.innerHTML = `${weatherDescr}`;
   let humidityNow = response.data.main.humidity;
   let currentHum = document.querySelector("#hum");
-  currentHum.innerHTML = `Humidity: ${humidityNow}%`;
+  currentHum.innerHTML = `Humidity:${humidityNow}%`;
   let windyNow = Math.round(response.data.wind.speed);
   let currentWindy = document.querySelector("#wind");
-  currentWindy.innerHTML = `Wind: ${windyNow} meter/sec`;
+  currentWindy.innerHTML = `Wind: ${windyNow} km/h`;
+  let currentIcon = document.querySelector("#icon");
+  currentIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function retrievePosition(position) {

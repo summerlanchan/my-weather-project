@@ -15,15 +15,15 @@ h6 {
   font-weight: 700;
 }
 button {
-  background: #84c0fe;
-  color: #cde1f1;
+  background: #a0c2e5;
+  color: #e2cee4;
   border-radius: 20px;
   padding: 5px 5px;
   margin-left: 300px;
   border: 1px solid;
 }
 button:hover {
-  background: #cde1f1;
+  background: #e2cee4;
   color: #84c0fe;
   cursor: pointer;
   transition: all 299ms ease-in-out;
@@ -42,17 +42,18 @@ button:hover {
   margin-right: 10px;
 }
 
-.kai-shi {
-  margin-left: 120px;
-}
 .row {
   margin-top: 35px;
 }
 
 .card {
   color: #84c0fe;
-  border: #42a5f5;
+  border: #e2cee4;
   border-radius: 10%;
+  margin-right: -32px;
+}
+.card-body {
+  padding: 2rem;
 }
 .fa-star-half-stroke {
   color: #ded7eb;
@@ -72,6 +73,9 @@ button:hover {
   color: aqua;
   cursor: pointer;
 }
+p.weather-now {
+  margin: 0px;
+}
 .weather-now {
   font-family: "Old Standard TT", serif;
 }
@@ -83,7 +87,15 @@ button:hover {
 }
 .code {
   display: block;
-  margin-left: 900px;
-  color: #84c0fe;
+  margin-top: 16px;
+  color: hsl(210, 98%, 76%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#degreesNow {
+  font-size: 25px;
+}
+
+#icon {
+  margin-right: -10px;
+  width: 60px;
 }
