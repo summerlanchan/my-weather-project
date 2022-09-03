@@ -99,10 +99,3 @@ p.weather-now {
   margin-right: -10px;
   width: 60px;
 }
-.weather-now .active {
-  color: black;
-  cursor: default;
-}
-.weather-now .active:hover {
-  text-decoration: none;
-}
