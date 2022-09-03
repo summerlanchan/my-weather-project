@@ -42,7 +42,7 @@ function showWeather(response) {
   currentHum.innerHTML = `Humidity:${humidityNow}%`;
   let windyNow = Math.round(response.data.wind.speed);
   let currentWindy = document.querySelector("#wind");
-  currentWindy.innerHTML = `Wind: ${windyNow} km/h`;
+  currentWindy.innerHTML = `Wind: ${windyNow} m/hr`;
   let currentIcon = document.querySelector("#icon");
   currentIcon.setAttribute(
     "src",
