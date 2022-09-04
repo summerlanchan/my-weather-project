@@ -5,7 +5,7 @@ body {
     rgb(214, 224, 255) 37.2%,
     rgb(254, 168, 168) 137.3%
   );
-  max-width: 75%;
+  max-width: 80%;
 }
 li {
   display: inline-flex;
@@ -32,25 +32,16 @@ button:hover {
   margin-left: 50px;
   padding-top: 5px;
 }
-.hourly {
-  margin-right: 10px;
-}
-.five-days {
-  margin-right: 10px;
-}
-.today {
-  margin-right: 10px;
-}
 
 .row {
   margin-top: 35px;
+  margin-left: 0px;
 }
 
 .card {
   color: #84c0fe;
   border: #e2cee4;
   border-radius: 10%;
-  margin-right: -32px;
 }
 .card-body {
   padding: 2rem;
@@ -61,18 +52,7 @@ button:hover {
 .fa-sun {
   color: rgb(249, 249, 111);
 }
-.today:hover {
-  color: aqua;
-  cursor: pointer;
-}
-.five-days:hover {
-  color: aqua;
-  cursor: pointer;
-}
-.two-weeks:hover {
-  color: aqua;
-  cursor: pointer;
-}
+
 p.weather-now {
   margin: 0px;
 }
@@ -98,4 +78,13 @@ p.weather-now {
 #icon {
   margin-right: -10px;
   width: 60px;
+}
+.weather-forecast-date {
+  font-size: 30px;
+  padding-top: -10px;
+}
+
+#card-forecast {
+  margin: 18px;
+  text-align: center;
 }

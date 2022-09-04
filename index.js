@@ -1,20 +1,19 @@
-function formatDate(timestamp) {
-  let now = new Date();
-  let currentTime = document.querySelector(".timeRightNow");
-  let hours = now.getHours();
-  let minutes = String(now.getMinutes()).padStart(2, "0");
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thurday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()];
-  currentTime.innerHTML = `Last updated: ${day}, ${hours}: ${minutes}`;
-}
+let now = new Date();
+let currentTime = document.querySelector(".timeRightNow");
+let hours = now.getHours();
+let minutes = String(now.getMinutes()).padStart(2, "0");
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thurday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+currentTime.innerHTML = `Last updated: ${day}, ${hours}: ${minutes}`;
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -54,7 +53,7 @@ function displayForecast(response) {
 }
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "9a1d1cd9039d2bbcc761d8fb8a19eb71";
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayForecast);
 }
@@ -65,7 +64,7 @@ function search(event) {
   h6.innerHTML = `${searchInput.value} <i class="fa-solid fa-star-half-stroke"></i>`;
   let whatsYourCity = document.querySelector("#location-result");
   whatsYourCity.innerHTML = `${searchInput.value}`;
-  let apiKey = "9a1d1cd9039d2bbcc761d8fb8a19eb71";
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showWeather);
@@ -100,7 +99,7 @@ function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let units = "metric";
-  let apiKey2 = "9a1d1cd9039d2bbcc761d8fb8a19eb71";
+  let apiKey2 = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiResult = "http://api.openweathermap/org/data/2.5/weather";
   let apiUrl2 = `${apiResult}?lat=${latitude}&lon=${longitude}&appid=${apiKey2}&units=${units}`;
   axios.get(apiUrl2).then(showWeather);
