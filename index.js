@@ -25,18 +25,18 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 7) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       <br />
-      <img src="https://openweatherapp.org/img/wn/${
+      <img src="http://openweathermap.org/img/wn/${
         forecastDay.weather[0].icon
       }@2x.png"
       alt=""
-         id="icons"
-          width="42"
+      id="icons"
+          width="42px"
           />
     <span class="weather-forecast-max">${Math.round(
       forecastDay.temp.max
@@ -53,7 +53,7 @@ function displayForecast(response) {
 }
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "7b40952ca13f5d687e1b65fcac145eab";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayForecast);
 }
@@ -64,7 +64,7 @@ function search(event) {
   h6.innerHTML = `${searchInput.value} <i class="fa-solid fa-star-half-stroke"></i>`;
   let whatsYourCity = document.querySelector("#location-result");
   whatsYourCity.innerHTML = `${searchInput.value}`;
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "7b40952ca13f5d687e1b65fcac145eab";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showWeather);
@@ -99,7 +99,7 @@ function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let units = "metric";
-  let apiKey2 = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey2 = "7b40952ca13f5d687e1b65fcac145eab";
   let apiResult = "http://api.openweathermap/org/data/2.5/weather";
   let apiUrl2 = `${apiResult}?lat=${latitude}&lon=${longitude}&appid=${apiKey2}&units=${units}`;
   axios.get(apiUrl2).then(showWeather);

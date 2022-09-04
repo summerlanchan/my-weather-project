@@ -45,6 +45,7 @@ button:hover {
 }
 .card-body {
   padding: 2rem;
+  border: red;
 }
 .fa-star-half-stroke {
   color: #ded7eb;
@@ -87,4 +88,7 @@ p.weather-now {
 #card-forecast {
   margin: 18px;
   text-align: center;
+}
+#icons {
+  width: 45px;
 }
