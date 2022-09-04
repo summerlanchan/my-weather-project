@@ -44,10 +44,25 @@ function showWeather(response) {
   let currentWindy = document.querySelector("#wind");
   currentWindy.innerHTML = `Wind: ${windyNow} m/hr`;
   let currentIcon = document.querySelector("#icon");
+
   currentIcon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+}
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col"><h4 class="weather-forecast-date">${day}<br /><img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon-forecast" width="42px"/></i>
+    <p>35&#8451; <br/> 24&#8451;</p></div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function retrievePosition(position) {
@@ -59,3 +74,4 @@ function retrievePosition(position) {
   let apiUrl2 = `${apiResult}?lat=${latitude}&lon=${longitude}&appid=${apiKey2}&units=${units}`;
   axios.get(apiUrl2).then(showWeather);
 }
+displayForecast();
